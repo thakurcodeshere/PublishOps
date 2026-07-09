@@ -1,0 +1,81 @@
+# =============================================================================
+# PublishOps — Next.js Dashboard Dockerfile (Multi-stage)
+# =============================================================================
+# Build targets:
+#   docker build --target dev  -f infra/docker/Dockerfile.dashboard .
+#   docker build --target prod -f infra/docker/Dockerfile.dashboard .
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Stage 1: Base — shared layer
+# ---------------------------------------------------------------------------
+FROM node:20-alpine AS base
+
+RUN apk add --no-cache libc6-compat curl
+WORKDIR /app
+
+# ---------------------------------------------------------------------------
+# Stage 2: Dependencies — install node_modules
+# ---------------------------------------------------------------------------
+FROM base AS deps
+
+COPY dashboard/package.json dashboard/package-lock.json* ./
+RUN npm ci --ignore-scripts
+
+# ---------------------------------------------------------------------------
+# Stage 3: Dev — next dev with hot reload
+# ---------------------------------------------------------------------------
+FROM base AS dev
+
+COPY --from=deps /app/node_modules ./node_modules
+# Source mounted as volume in docker-compose
+
+ENV NEXT_TELEMETRY_DISABLED=1 \
+    NODE_ENV=development
+
+USER node
+
+EXPOSE 3000
+
+CMD ["npx", "next", "dev", "--hostname", "0.0.0.0", "--port", "3000"]
+
+# ---------------------------------------------------------------------------
+# Stage 4: Builder — production build
+# ---------------------------------------------------------------------------
+FROM base AS builder
+
+COPY --from=deps /app/node_modules ./node_modules
+COPY dashboard/ ./
+
+ENV NEXT_TELEMETRY_DISABLED=1 \
+    NODE_ENV=production
+
+RUN npx next build
+
+# ---------------------------------------------------------------------------
+# Stage 5: Prod — standalone server
+# ---------------------------------------------------------------------------
+FROM node:20-alpine AS prod
+
+RUN apk add --no-cache curl
+WORKDIR /app
+
+ENV NODE_ENV=production \
+    NEXT_TELEMETRY_DISABLED=1
+
+RUN addgroup --system --gid 1001 nodejs \
+    && adduser --system --uid 1001 nextjs
+
+# Copy standalone output
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+
+USER nextjs
+
+EXPOSE 3000
+
+ENV HOSTNAME="0.0.0.0" \
+    PORT=3000
+
+CMD ["node", "server.js"]

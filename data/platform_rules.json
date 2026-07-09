@@ -1,0 +1,327 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-06-01",
+  "platforms": {
+    "youtube": {
+      "platform_id": "youtube",
+      "display_name": "YouTube",
+      "content_types": ["short", "long_form", "community_post", "live"],
+      "algorithm_signals": [
+        {
+          "name": "click_through_rate",
+          "weight": 0.92,
+          "description": "Percentage of impressions that result in a click. Thumbnail + title combination is the primary driver.",
+          "optimization_notes": "Target 8-12% CTR for Shorts, 4-8% for long-form. Use curiosity gaps, bold text overlays, and expressive faces in thumbnails. Split-test 3 thumbnails per video."
+        },
+        {
+          "name": "average_percentage_viewed",
+          "weight": 0.95,
+          "description": "Average fraction of the video watched. The single most important retention signal for YouTube's recommendation engine.",
+          "optimization_notes": "Target >70% for Shorts, >50% for long-form. Front-load value, use pattern interrupts every 30-60s, add open loops. Drop-off spikes usually occur at intros >15s."
+        },
+        {
+          "name": "session_watch_time",
+          "weight": 0.80,
+          "description": "Total watch time a viewer accumulates on the platform after watching your video. YouTube rewards content that keeps users on-platform.",
+          "optimization_notes": "Use end screens linking to playlists. Suggest next video verbally. Chain Shorts into series. Avoid external links in first 24 hours."
+        },
+        {
+          "name": "browse_feature_ctr",
+          "weight": 0.72,
+          "description": "Click-through rate specifically from the Browse (homepage) feature. Determines homepage promotion eligibility.",
+          "optimization_notes": "Clean thumbnails with 3 or fewer text words, high contrast, close-up faces. Titles under 60 characters with a number or emotional word."
+        },
+        {
+          "name": "subscriber_conversion",
+          "weight": 0.65,
+          "description": "Rate of non-subscribers who subscribe after watching. Signals content quality and channel value proposition.",
+          "optimization_notes": "Include a subscribe CTA between 40-60% through the video (when engagement is proven). Avoid generic CTAs — tie to specific value."
+        },
+        {
+          "name": "comment_velocity",
+          "weight": 0.70,
+          "description": "Number of comments received in the first 1-2 hours after publish. Signals audience engagement to the recommendation algorithm.",
+          "optimization_notes": "Ask a specific question in the last 15 seconds. Pin a controversial or curiosity-provoking first comment. Reply to every comment in the first hour."
+        },
+        {
+          "name": "like_to_view_ratio",
+          "weight": 0.55,
+          "description": "Ratio of likes relative to view count. Secondary quality signal behind retention.",
+          "optimization_notes": "Target >5% like ratio. Deliver an 'aha' moment in the first 30 seconds. Emotional payoff increases like probability."
+        },
+        {
+          "name": "share_rate",
+          "weight": 0.68,
+          "description": "Number of shares via platform share button, DMs, and external links. High-value signal indicating content worth spreading.",
+          "optimization_notes": "Create 'I need to show this to someone' moments. Relatable humor, surprising facts, and useful tutorials get shared most."
+        }
+      ],
+      "posting_rules": {
+        "optimal_times_utc": ["14:00", "17:00", "20:00"],
+        "min_gap_hours": 4,
+        "max_daily": 3,
+        "shorts_max_daily": 5,
+        "description_max_chars": 5000,
+        "title_max_chars": 100,
+        "tags_max": 30,
+        "hashtags_max": 15
+      }
+    },
+    "tiktok": {
+      "platform_id": "tiktok",
+      "display_name": "TikTok",
+      "content_types": ["video", "photo_carousel", "live", "story"],
+      "algorithm_signals": [
+        {
+          "name": "completion_rate",
+          "weight": 0.98,
+          "description": "Percentage of viewers who watch the video to the end. The single most important signal in TikTok's For You algorithm.",
+          "optimization_notes": "Keep videos under 30s for highest completion. Hook in first 0.5s. Use cliffhanger endings that loop seamlessly. Target >80% completion for viral potential."
+        },
+        {
+          "name": "rewatch_rate",
+          "weight": 0.90,
+          "description": "Percentage of viewers who replay the video. Multiplied with completion rate to form TikTok's core engagement score.",
+          "optimization_notes": "Hide details that require rewatching. Use fast transitions. End with a twist that recontextualizes the beginning. Text overlays viewers need to pause for."
+        },
+        {
+          "name": "share_rate",
+          "weight": 0.85,
+          "description": "Rate of shares to DMs, other platforms, and copy-link actions. TikTok's strongest 'quality' signal for pushing to broader audiences.",
+          "optimization_notes": "Create content people tag friends in. Duet/stitch-bait formats. 'Send this to someone who...' hooks. Tutorials people save for later."
+        },
+        {
+          "name": "save_rate",
+          "weight": 0.82,
+          "description": "Rate of users bookmarking the video. Indicates long-term value and pushes content to the Explore algorithm.",
+          "optimization_notes": "Educational content, recipes, tutorials, and life hacks get saved most. Add 'Save this for later' CTA. Multi-step content drives saves."
+        },
+        {
+          "name": "sound_usage",
+          "weight": 0.60,
+          "description": "Whether the video uses a trending sound and whether others subsequently use your original sound.",
+          "optimization_notes": "Use trending sounds within 48 hours of trend emergence. Original sounds that get reused signal creator authority. Mix trending audio with original voiceover."
+        },
+        {
+          "name": "initial_engagement_velocity",
+          "weight": 0.88,
+          "description": "Speed of engagement (likes, comments, shares) in the first 30-60 minutes. Determines whether TikTok pushes the video to larger batch audiences.",
+          "optimization_notes": "Post when core audience is active. Engage with comments immediately. First 200-500 views are the 'test batch' — optimize for these. Controversial hooks spike velocity."
+        },
+        {
+          "name": "comment_sentiment",
+          "weight": 0.50,
+          "description": "Natural language analysis of comment sentiment and substantiveness. Longer, positive comments weight higher than emoji-only replies.",
+          "optimization_notes": "Ask open-ended questions. Create debate-worthy content. Reply with follow-up questions to extend threads. Pin a comment that encourages discussion."
+        },
+        {
+          "name": "profile_visit_rate",
+          "weight": 0.65,
+          "description": "Rate of viewers who visit your profile after watching. Signals creator interest and funnel potential.",
+          "optimization_notes": "Leave a curiosity gap about who you are. Series content ('Part 1 of...') drives profile visits. Strong personal brand elements in video."
+        }
+      ],
+      "posting_rules": {
+        "optimal_times_utc": ["11:00", "15:00", "19:00", "22:00"],
+        "min_gap_hours": 2,
+        "max_daily": 5,
+        "caption_max_chars": 4000,
+        "hashtags_max": 5,
+        "video_max_duration_seconds": 600,
+        "video_min_duration_seconds": 5
+      }
+    },
+    "instagram": {
+      "platform_id": "instagram",
+      "display_name": "Instagram",
+      "content_types": ["reel", "carousel", "single_image", "story", "live"],
+      "algorithm_signals": [
+        {
+          "name": "save_rate",
+          "weight": 0.93,
+          "description": "Rate of saves/bookmarks. Instagram's most heavily weighted engagement signal, indicating content has lasting value.",
+          "optimization_notes": "Educational carousels, infographics, and quote graphics get saved most. Add 'Save for later' CTA. Provide actionable takeaways."
+        },
+        {
+          "name": "share_rate",
+          "weight": 0.90,
+          "description": "Rate of DM shares and story reshares. Second most important signal after saves for Explore page eligibility.",
+          "optimization_notes": "Create memes, relatable content, and tag-a-friend worthy posts. Controversial opinions drive shares. Keep carousels shareable by making slide 1 a standalone hook."
+        },
+        {
+          "name": "carousel_completion_rate",
+          "weight": 0.78,
+          "description": "For carousel posts, the percentage of users who swipe through all slides. Equivalent to watch time for Reels.",
+          "optimization_notes": "Use 7-10 slides for optimal completion. Slide 1 is the hook, slide 2 is 'swipe for more', last slide is CTA. Each slide must add value — no filler."
+        },
+        {
+          "name": "reel_replay_rate",
+          "weight": 0.85,
+          "description": "How often Reels are replayed. Key signal for Reels algorithm ranking, similar to TikTok's rewatch rate.",
+          "optimization_notes": "Keep Reels under 15s for highest replay. Use seamless loops. Dense information that requires rewatching. Satisfying visual transitions."
+        },
+        {
+          "name": "hashtag_relevance",
+          "weight": 0.45,
+          "description": "Topical relevance of hashtags to content. Instagram now uses hashtags as topic classifiers, not discovery tools.",
+          "optimization_notes": "Use 3-5 highly relevant hashtags. Mix 1 broad (1M+), 2 medium (100K-1M), 2 niche (<100K). Avoid banned or spammy hashtags. Place in caption, not comments."
+        },
+        {
+          "name": "time_spent_on_post",
+          "weight": 0.75,
+          "description": "Dwell time on the post. Longer viewing indicates interest and quality. Applies to all content types.",
+          "optimization_notes": "Long captions with storytelling increase dwell time. Detailed infographic carousels. Reels with text overlays that take time to read."
+        },
+        {
+          "name": "comment_depth",
+          "weight": 0.68,
+          "description": "Quality and depth of comments — threaded conversations weight more than single emoji comments.",
+          "optimization_notes": "Ask polarizing questions. Share vulnerable stories that invite responses. Reply with substantive comments to create threads. Use question stickers in Stories."
+        },
+        {
+          "name": "follow_rate_from_content",
+          "weight": 0.62,
+          "description": "Rate of new followers gained from a specific piece of content. Signals the content attracts new audience.",
+          "optimization_notes": "Strong branded intro slides. Value-packed content that makes users want more. Clear niche positioning. 'Follow for more [topic]' CTA on final slide."
+        }
+      ],
+      "posting_rules": {
+        "optimal_times_utc": ["11:00", "14:00", "17:00", "20:00"],
+        "min_gap_hours": 3,
+        "max_daily_feed": 2,
+        "max_daily_stories": 10,
+        "max_daily_reels": 3,
+        "caption_max_chars": 2200,
+        "hashtags_max": 30,
+        "carousel_max_slides": 20
+      }
+    },
+    "twitter": {
+      "platform_id": "twitter",
+      "display_name": "Twitter / X",
+      "content_types": ["tweet", "thread", "quote_tweet", "reply", "space"],
+      "algorithm_signals": [
+        {
+          "name": "reply_rate",
+          "weight": 0.88,
+          "description": "Rate of replies relative to impressions. X's algorithm heavily favors tweets that generate conversation.",
+          "optimization_notes": "Ask direct questions. Share hot takes with room for nuance. Use 'What's your take?' or 'Unpopular opinion:' formats. Reply to your own tweet to seed conversation."
+        },
+        {
+          "name": "retweet_rate",
+          "weight": 0.80,
+          "description": "Rate of retweets (including quote tweets). Primary distribution mechanism on X for reaching beyond followers.",
+          "optimization_notes": "Actionable tips, data insights, and controversial-but-defensible opinions get retweeted most. Thread hooks that promise a story. Timely commentary on trending topics."
+        },
+        {
+          "name": "bookmark_rate",
+          "weight": 0.85,
+          "description": "Rate of bookmarks. X has publicly stated bookmarks are a strong ranking signal — they indicate value without social pressure.",
+          "optimization_notes": "How-to threads, resource lists, and data-backed insights get bookmarked. Add 'Bookmark this thread' at the end. Make content reference-worthy."
+        },
+        {
+          "name": "dwell_time",
+          "weight": 0.72,
+          "description": "Time spent viewing a tweet before scrolling past. Applies to text, images, and video. Longer dwell = higher interest signal.",
+          "optimization_notes": "Use images with dense information. Long-form tweets (280 chars) with line breaks. Thread format for storytelling. Embed charts and screenshots."
+        },
+        {
+          "name": "quote_tweet_rate",
+          "weight": 0.78,
+          "description": "Rate of quote tweets. Weighted higher than retweets because they create new discussion nodes in the graph.",
+          "optimization_notes": "Share opinions that people want to add commentary to. Data without analysis invites quote tweets. 'Here's what most people get wrong about...' format."
+        },
+        {
+          "name": "profile_click_rate",
+          "weight": 0.60,
+          "description": "Rate of profile visits from a tweet. Indicates the content made users curious about the author.",
+          "optimization_notes": "Include credentials or contrarian positioning. 'I spent 10 years doing X, here's what I learned' format. Strong voice and personality in tweets."
+        },
+        {
+          "name": "link_click_rate",
+          "weight": 0.40,
+          "description": "Rate of clicks on embedded links. Lower weight because X de-prioritizes external links in the algorithm.",
+          "optimization_notes": "Put links in the first reply, not the main tweet. Use text-only tweets for reach, link tweets for conversion. If linking, front-load the value proposition."
+        },
+        {
+          "name": "follower_engagement_ratio",
+          "weight": 0.55,
+          "description": "Engagement from followers vs non-followers. High non-follower engagement indicates broad appeal.",
+          "optimization_notes": "Participate in trending conversations. Use 1-2 relevant hashtags on X. Create standalone tweets that don't require following context."
+        }
+      ],
+      "posting_rules": {
+        "optimal_times_utc": ["13:00", "16:00", "20:00", "23:00"],
+        "min_gap_minutes": 30,
+        "max_daily_tweets": 15,
+        "max_thread_tweets": 25,
+        "tweet_max_chars": 280,
+        "hashtags_max": 2
+      }
+    },
+    "linkedin": {
+      "platform_id": "linkedin",
+      "display_name": "LinkedIn",
+      "content_types": ["text_post", "article", "document", "video", "poll", "newsletter"],
+      "algorithm_signals": [
+        {
+          "name": "dwell_time",
+          "weight": 0.90,
+          "description": "Time spent reading or viewing a post. LinkedIn's most important signal — long-form text and document posts benefit most.",
+          "optimization_notes": "Write 1200-1500 character posts with line breaks. Use the 'hook → story → insight → CTA' format. Document (PDF carousel) posts get 3x more dwell time than text."
+        },
+        {
+          "name": "comment_depth",
+          "weight": 0.88,
+          "description": "Quality, length, and threading of comments. Multi-reply conversations signal content that sparks professional dialogue.",
+          "optimization_notes": "End every post with a genuine question. Reply to every comment with a thoughtful follow-up question. Tag relevant people who might add expert perspective."
+        },
+        {
+          "name": "share_rate",
+          "weight": 0.75,
+          "description": "Rate of reshares to personal networks. Extends reach to 2nd and 3rd degree connections.",
+          "optimization_notes": "Industry insights, career advice, and contrarian professional opinions get shared. Data-driven posts with original analysis. Avoid overly promotional content."
+        },
+        {
+          "name": "document_view_completion",
+          "weight": 0.82,
+          "description": "For document (PDF carousel) posts, the percentage of slides viewed. LinkedIn's equivalent of watch time.",
+          "optimization_notes": "Use 8-12 slides with large text. Slide 1 is the hook, slide 2 is 'swipe →'. Each slide should have one key point. End with a summary + CTA slide."
+        },
+        {
+          "name": "click_through_rate",
+          "weight": 0.48,
+          "description": "Rate of clicks on links or 'see more' button. Lower weight because LinkedIn deprioritizes external links.",
+          "optimization_notes": "Put links in the first comment, not the post body. Use 'link in comments' CTA. Native content (no external links) gets 3-5x more reach."
+        },
+        {
+          "name": "reaction_diversity",
+          "weight": 0.55,
+          "description": "Variety of reactions (like, celebrate, support, love, insightful, funny). Diverse reactions signal content that resonates emotionally.",
+          "optimization_notes": "Share wins for 'celebrate', vulnerable stories for 'support', data insights for 'insightful'. Varied emotional tone across posts."
+        },
+        {
+          "name": "early_engagement_velocity",
+          "weight": 0.85,
+          "description": "Engagement in the first 60-90 minutes. LinkedIn tests posts with a small audience segment first before broader distribution.",
+          "optimization_notes": "Post when your network is active (typically 8-10 AM local). Engage with others for 15 min before posting. Reply to all comments within 1 hour."
+        },
+        {
+          "name": "connection_relevance",
+          "weight": 0.58,
+          "description": "How relevant the content is to your connections' stated interests and industry. Determined by topic classification.",
+          "optimization_notes": "Stay consistent with your professional niche. Use industry-specific terminology. LinkedIn classifies posts into topics — be clearly in one lane."
+        }
+      ],
+      "posting_rules": {
+        "optimal_times_utc": ["12:00", "15:00", "17:00"],
+        "min_gap_hours": 18,
+        "max_daily": 2,
+        "post_max_chars": 3000,
+        "article_max_chars": 125000,
+        "hashtags_max": 5,
+        "document_max_pages": 300
+      }
+    }
+  }
+}

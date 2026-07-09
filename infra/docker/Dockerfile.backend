@@ -1,0 +1,79 @@
+# =============================================================================
+# PublishOps — FastAPI Backend Dockerfile (Multi-stage)
+# =============================================================================
+# Build targets:
+#   docker build --target dev  -f infra/docker/Dockerfile.backend .
+#   docker build --target prod -f infra/docker/Dockerfile.backend .
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Stage 1: Base — shared dependencies
+# ---------------------------------------------------------------------------
+FROM python:3.12-slim AS base
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        ffmpeg \
+        libpq-dev \
+        gcc \
+        curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create non-root user
+RUN groupadd --gid 1000 appuser \
+    && useradd --uid 1000 --gid appuser --shell /bin/bash --create-home appuser
+
+WORKDIR /app
+
+# Install Python deps first (cache layer)
+COPY backend/requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# ---------------------------------------------------------------------------
+# Stage 2: Dev — hot reload with uvicorn
+# ---------------------------------------------------------------------------
+FROM base AS dev
+
+# Install dev-only dependencies
+RUN pip install --no-cache-dir \
+    debugpy \
+    pytest \
+    pytest-asyncio \
+    httpx \
+    coverage \
+    ruff
+
+# Source is mounted as volume in docker-compose — no COPY needed
+USER appuser
+
+EXPOSE 8000
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload", "--reload-dir", "/app"]
+
+# ---------------------------------------------------------------------------
+# Stage 3: Prod — gunicorn with uvicorn workers
+# ---------------------------------------------------------------------------
+FROM base AS prod
+
+COPY backend/ /app/
+
+RUN chown -R appuser:appuser /app
+USER appuser
+
+EXPOSE 8000
+
+CMD ["gunicorn", "app.main:app", \
+     "--bind", "0.0.0.0:8000", \
+     "--worker-class", "uvicorn.workers.UvicornWorker", \
+     "--workers", "4", \
+     "--timeout", "120", \
+     "--graceful-timeout", "30", \
+     "--keep-alive", "5", \
+     "--max-requests", "1000", \
+     "--max-requests-jitter", "50", \
+     "--access-logfile", "-", \
+     "--error-logfile", "-"]

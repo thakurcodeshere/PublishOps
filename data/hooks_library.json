@@ -1,0 +1,501 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-06-01",
+  "hooks": [
+    {
+      "id": "hook_001",
+      "text": "I analyzed 10,000 viral videos and found the one thing they all have in common",
+      "hook_type": "statistic",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.95, "tiktok": 0.90, "instagram": 0.80, "twitter": 0.85, "linkedin": 0.70 },
+      "avg_score": 8.7,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_002",
+      "text": "Stop posting at 9 AM. Here's when your audience is actually online",
+      "hook_type": "contrarian",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.80, "tiktok": 0.85, "instagram": 0.90, "twitter": 0.88, "linkedin": 0.92 },
+      "avg_score": 8.4,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_003",
+      "text": "This strategy took me from 0 to 100K followers in 90 days",
+      "hook_type": "story",
+      "target_emotion": "inspiration",
+      "platform_affinity": { "youtube": 0.88, "tiktok": 0.92, "instagram": 0.90, "twitter": 0.75, "linkedin": 0.80 },
+      "avg_score": 8.1,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_004",
+      "text": "The algorithm doesn't hate you. You're just making these 5 mistakes",
+      "hook_type": "list",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.92, "tiktok": 0.88, "instagram": 0.85, "twitter": 0.82, "linkedin": 0.78 },
+      "avg_score": 8.5,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_005",
+      "text": "Your competitors are using this tool and you don't even know it exists",
+      "hook_type": "contrarian",
+      "target_emotion": "fomo",
+      "platform_affinity": { "youtube": 0.82, "tiktok": 0.80, "instagram": 0.78, "twitter": 0.85, "linkedin": 0.90 },
+      "avg_score": 7.9,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_006",
+      "text": "I spent $50,000 on ads so you don't have to. Here's what actually works",
+      "hook_type": "statistic",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.95, "tiktok": 0.78, "instagram": 0.80, "twitter": 0.88, "linkedin": 0.85 },
+      "avg_score": 8.8,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_007",
+      "text": "POV: You finally learn how the algorithm actually decides who sees your content",
+      "hook_type": "story",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.75, "tiktok": 0.95, "instagram": 0.90, "twitter": 0.60, "linkedin": 0.50 },
+      "avg_score": 8.0,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_008",
+      "text": "Unpopular opinion: Hashtags are dead. Here's what replaced them",
+      "hook_type": "contrarian",
+      "target_emotion": "outrage",
+      "platform_affinity": { "youtube": 0.70, "tiktok": 0.85, "instagram": 0.92, "twitter": 0.90, "linkedin": 0.75 },
+      "avg_score": 8.3,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_009",
+      "text": "In 2026, the creators who ignore this trend will be irrelevant by December",
+      "hook_type": "prediction",
+      "target_emotion": "urgency",
+      "platform_affinity": { "youtube": 0.85, "tiktok": 0.88, "instagram": 0.82, "twitter": 0.90, "linkedin": 0.88 },
+      "avg_score": 8.2,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_010",
+      "text": "Reply 'GUIDE' and I'll send you the exact template I use",
+      "hook_type": "challenge",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.60, "tiktok": 0.75, "instagram": 0.92, "twitter": 0.70, "linkedin": 0.50 },
+      "avg_score": 7.5,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_011",
+      "text": "A Harvard study just proved what every content creator suspected about engagement",
+      "hook_type": "statistic",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.88, "tiktok": 0.80, "instagram": 0.78, "twitter": 0.92, "linkedin": 0.95 },
+      "avg_score": 8.6,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_012",
+      "text": "I asked ChatGPT to write my hooks. Then I asked a copywriter. The difference was shocking",
+      "hook_type": "story",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.90, "tiktok": 0.88, "instagram": 0.82, "twitter": 0.85, "linkedin": 0.80 },
+      "avg_score": 8.5,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_013",
+      "text": "What if I told you that your best-performing content is hurting your brand?",
+      "hook_type": "contrarian",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.85, "tiktok": 0.82, "instagram": 0.80, "twitter": 0.88, "linkedin": 0.90 },
+      "avg_score": 8.0,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_014",
+      "text": "3 things I'd do if I had to restart my social media from zero today",
+      "hook_type": "list",
+      "target_emotion": "inspiration",
+      "platform_affinity": { "youtube": 0.90, "tiktok": 0.92, "instagram": 0.88, "twitter": 0.85, "linkedin": 0.82 },
+      "avg_score": 8.4,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_015",
+      "text": "The real reason your Reels get 200 views while others get 2 million",
+      "hook_type": "question",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.75, "tiktok": 0.88, "instagram": 0.95, "twitter": 0.70, "linkedin": 0.60 },
+      "avg_score": 8.3,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_016",
+      "text": "Every creator making over $10K/month does this one thing differently",
+      "hook_type": "statistic",
+      "target_emotion": "fomo",
+      "platform_affinity": { "youtube": 0.90, "tiktok": 0.85, "instagram": 0.82, "twitter": 0.80, "linkedin": 0.88 },
+      "avg_score": 8.1,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_017",
+      "text": "I posted the same video on 5 platforms. One got 3M views, another got 47",
+      "hook_type": "story",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.92, "tiktok": 0.90, "instagram": 0.85, "twitter": 0.88, "linkedin": 0.80 },
+      "avg_score": 8.9,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_018",
+      "text": "Therapists are now saying social media burnout is a clinical condition. Here's how to avoid it",
+      "hook_type": "statistic",
+      "target_emotion": "urgency",
+      "platform_affinity": { "youtube": 0.82, "tiktok": 0.78, "instagram": 0.85, "twitter": 0.80, "linkedin": 0.92 },
+      "avg_score": 7.8,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_019",
+      "text": "The 60-second rule that doubled my engagement rate overnight",
+      "hook_type": "statistic",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.88, "tiktok": 0.90, "instagram": 0.85, "twitter": 0.82, "linkedin": 0.80 },
+      "avg_score": 8.2,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_020",
+      "text": "Think consistency is the key to growth? Think again",
+      "hook_type": "contrarian",
+      "target_emotion": "outrage",
+      "platform_affinity": { "youtube": 0.85, "tiktok": 0.82, "instagram": 0.80, "twitter": 0.90, "linkedin": 0.88 },
+      "avg_score": 8.0,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_021",
+      "text": "I reverse-engineered how MrBeast titles his videos. Here's the formula",
+      "hook_type": "story",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.98, "tiktok": 0.85, "instagram": 0.75, "twitter": 0.88, "linkedin": 0.60 },
+      "avg_score": 9.0,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_022",
+      "text": "Your content isn't bad. Your packaging is. Let me explain",
+      "hook_type": "contrarian",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.88, "tiktok": 0.85, "instagram": 0.82, "twitter": 0.90, "linkedin": 0.85 },
+      "avg_score": 8.3,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_023",
+      "text": "The difference between a $0 and a $100K creator? It's not what you think",
+      "hook_type": "question",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.88, "tiktok": 0.85, "instagram": 0.80, "twitter": 0.82, "linkedin": 0.90 },
+      "avg_score": 8.1,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_024",
+      "text": "Day 1 of building a faceless YouTube channel from scratch. Follow along",
+      "hook_type": "challenge",
+      "target_emotion": "inspiration",
+      "platform_affinity": { "youtube": 0.92, "tiktok": 0.90, "instagram": 0.88, "twitter": 0.78, "linkedin": 0.60 },
+      "avg_score": 8.0,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_025",
+      "text": "Instagram just shadow-banned 40% of accounts using this popular strategy",
+      "hook_type": "statistic",
+      "target_emotion": "urgency",
+      "platform_affinity": { "youtube": 0.80, "tiktok": 0.78, "instagram": 0.98, "twitter": 0.85, "linkedin": 0.60 },
+      "avg_score": 8.7,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_026",
+      "text": "Watch me turn a one-star review into my best-performing content of the month",
+      "hook_type": "story",
+      "target_emotion": "amusement",
+      "platform_affinity": { "youtube": 0.90, "tiktok": 0.92, "instagram": 0.85, "twitter": 0.80, "linkedin": 0.75 },
+      "avg_score": 8.4,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_027",
+      "text": "LinkedIn just changed everything. Here's what the new algorithm rewards",
+      "hook_type": "prediction",
+      "target_emotion": "urgency",
+      "platform_affinity": { "youtube": 0.60, "tiktok": 0.50, "instagram": 0.55, "twitter": 0.82, "linkedin": 0.98 },
+      "avg_score": 8.5,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_028",
+      "text": "I track every piece of content I post. After 1,000 posts, here are the patterns I found",
+      "hook_type": "statistic",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.90, "tiktok": 0.82, "instagram": 0.80, "twitter": 0.92, "linkedin": 0.88 },
+      "avg_score": 8.6,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_029",
+      "text": "The hook you use in the first 3 seconds determines 80% of your video's success",
+      "hook_type": "statistic",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.92, "tiktok": 0.95, "instagram": 0.88, "twitter": 0.78, "linkedin": 0.70 },
+      "avg_score": 8.3,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_030",
+      "text": "I'm about to ruin your favorite content strategy. You've been wasting your time",
+      "hook_type": "contrarian",
+      "target_emotion": "outrage",
+      "platform_affinity": { "youtube": 0.88, "tiktok": 0.90, "instagram": 0.82, "twitter": 0.92, "linkedin": 0.75 },
+      "avg_score": 8.2,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_031",
+      "text": "Name one creator who went viral without ever following a trend. I'll wait",
+      "hook_type": "challenge",
+      "target_emotion": "amusement",
+      "platform_affinity": { "youtube": 0.70, "tiktok": 0.88, "instagram": 0.82, "twitter": 0.95, "linkedin": 0.60 },
+      "avg_score": 7.8,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_032",
+      "text": "Imagine waking up to 1M views every single morning. That's exactly what happened when I changed this one setting",
+      "hook_type": "story",
+      "target_emotion": "inspiration",
+      "platform_affinity": { "youtube": 0.90, "tiktok": 0.92, "instagram": 0.85, "twitter": 0.78, "linkedin": 0.70 },
+      "avg_score": 8.0,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_033",
+      "text": "Why your 'value-packed' content is actually repelling your ideal audience",
+      "hook_type": "contrarian",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.85, "tiktok": 0.80, "instagram": 0.82, "twitter": 0.90, "linkedin": 0.92 },
+      "avg_score": 8.4,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_034",
+      "text": "7 free tools that replaced my entire $500/month content tech stack",
+      "hook_type": "list",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.92, "tiktok": 0.85, "instagram": 0.88, "twitter": 0.90, "linkedin": 0.82 },
+      "avg_score": 8.7,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_035",
+      "text": "The CEO of TikTok just leaked how the For You page really works",
+      "hook_type": "statistic",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.82, "tiktok": 0.98, "instagram": 0.78, "twitter": 0.90, "linkedin": 0.70 },
+      "avg_score": 8.5,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_036",
+      "text": "Are you a content creator or a content machine? The distinction matters more than you think",
+      "hook_type": "question",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.80, "tiktok": 0.75, "instagram": 0.82, "twitter": 0.88, "linkedin": 0.95 },
+      "avg_score": 7.9,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_037",
+      "text": "I grew 50K followers in 30 days using only carousels. Here's every single one I posted",
+      "hook_type": "story",
+      "target_emotion": "inspiration",
+      "platform_affinity": { "youtube": 0.60, "tiktok": 0.55, "instagram": 0.98, "twitter": 0.70, "linkedin": 0.85 },
+      "avg_score": 8.3,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_038",
+      "text": "If your content was a movie, would anyone buy a ticket? Honest question",
+      "hook_type": "analogy",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.82, "tiktok": 0.80, "instagram": 0.78, "twitter": 0.92, "linkedin": 0.85 },
+      "avg_score": 7.7,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_039",
+      "text": "Social media is about to change more in the next 6 months than it has in the last 6 years",
+      "hook_type": "prediction",
+      "target_emotion": "urgency",
+      "platform_affinity": { "youtube": 0.85, "tiktok": 0.82, "instagram": 0.80, "twitter": 0.92, "linkedin": 0.90 },
+      "avg_score": 8.1,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_040",
+      "text": "Delete every post that got less than 100 likes. Here's why",
+      "hook_type": "contrarian",
+      "target_emotion": "outrage",
+      "platform_affinity": { "youtube": 0.70, "tiktok": 0.78, "instagram": 0.90, "twitter": 0.88, "linkedin": 0.72 },
+      "avg_score": 8.0,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_041",
+      "text": "The 5-3-1 posting framework that top creators never talk about publicly",
+      "hook_type": "list",
+      "target_emotion": "fomo",
+      "platform_affinity": { "youtube": 0.85, "tiktok": 0.80, "instagram": 0.88, "twitter": 0.82, "linkedin": 0.90 },
+      "avg_score": 8.4,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_042",
+      "text": "Your audience scrolled past 300 posts before they saw yours. What made them stop?",
+      "hook_type": "question",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.80, "tiktok": 0.85, "instagram": 0.88, "twitter": 0.82, "linkedin": 0.78 },
+      "avg_score": 8.2,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_043",
+      "text": "Building a personal brand is like cooking. Most people skip the prep and wonder why it tastes bland",
+      "hook_type": "analogy",
+      "target_emotion": "amusement",
+      "platform_affinity": { "youtube": 0.78, "tiktok": 0.80, "instagram": 0.82, "twitter": 0.88, "linkedin": 0.92 },
+      "avg_score": 7.8,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_044",
+      "text": "Nobody wants to admit it, but 90% of 'viral' content is engineered. Here's the blueprint",
+      "hook_type": "contrarian",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.92, "tiktok": 0.88, "instagram": 0.82, "twitter": 0.90, "linkedin": 0.80 },
+      "avg_score": 8.6,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_045",
+      "text": "I replaced my entire team with AI tools. Here's the honest truth after 6 months",
+      "hook_type": "story",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.92, "tiktok": 0.85, "instagram": 0.80, "twitter": 0.90, "linkedin": 0.95 },
+      "avg_score": 8.8,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_046",
+      "text": "Try this: Post nothing for 7 days. What happens next will change your strategy forever",
+      "hook_type": "challenge",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.82, "tiktok": 0.85, "instagram": 0.80, "twitter": 0.88, "linkedin": 0.78 },
+      "avg_score": 7.9,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_047",
+      "text": "Only 2% of creators will survive the next algorithm update. Here's how to be one of them",
+      "hook_type": "prediction",
+      "target_emotion": "urgency",
+      "platform_affinity": { "youtube": 0.88, "tiktok": 0.85, "instagram": 0.82, "twitter": 0.90, "linkedin": 0.80 },
+      "avg_score": 8.3,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_048",
+      "text": "Your followers don't owe you anything. This mindset shift 10x'd my revenue",
+      "hook_type": "story",
+      "target_emotion": "inspiration",
+      "platform_affinity": { "youtube": 0.85, "tiktok": 0.80, "instagram": 0.82, "twitter": 0.88, "linkedin": 0.92 },
+      "avg_score": 8.1,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_049",
+      "text": "The creator economy is a pyramid scheme — and you're not at the top. Here's how to fix that",
+      "hook_type": "contrarian",
+      "target_emotion": "outrage",
+      "platform_affinity": { "youtube": 0.88, "tiktok": 0.85, "instagram": 0.78, "twitter": 0.95, "linkedin": 0.82 },
+      "avg_score": 8.5,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_050",
+      "text": "Save this list: 10 content ideas that work on every single platform, every single time",
+      "hook_type": "list",
+      "target_emotion": "fomo",
+      "platform_affinity": { "youtube": 0.82, "tiktok": 0.88, "instagram": 0.92, "twitter": 0.85, "linkedin": 0.80 },
+      "avg_score": 8.2,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_051",
+      "text": "What separates a 6-figure creator from someone who quits after 3 months? One word: systems",
+      "hook_type": "question",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.88, "tiktok": 0.80, "instagram": 0.82, "twitter": 0.85, "linkedin": 0.95 },
+      "avg_score": 8.3,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_052",
+      "text": "Content creation is like chess. Most people are playing checkers. Let me show you the board",
+      "hook_type": "analogy",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.85, "tiktok": 0.78, "instagram": 0.80, "twitter": 0.90, "linkedin": 0.88 },
+      "avg_score": 7.9,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_053",
+      "text": "I just got access to YouTube's internal creator playbook. Here are the highlights",
+      "hook_type": "story",
+      "target_emotion": "fomo",
+      "platform_affinity": { "youtube": 0.98, "tiktok": 0.80, "instagram": 0.75, "twitter": 0.90, "linkedin": 0.78 },
+      "avg_score": 8.7,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_054",
+      "text": "Warning: If you're using scheduling tools wrong, you're tanking your reach by 60%",
+      "hook_type": "statistic",
+      "target_emotion": "urgency",
+      "platform_affinity": { "youtube": 0.78, "tiktok": 0.80, "instagram": 0.90, "twitter": 0.88, "linkedin": 0.85 },
+      "avg_score": 8.1,
+      "usage_count": 0
+    },
+    {
+      "id": "hook_055",
+      "text": "Drop your niche in the comments and I'll tell you exactly what content to post this week",
+      "hook_type": "challenge",
+      "target_emotion": "curiosity",
+      "platform_affinity": { "youtube": 0.75, "tiktok": 0.90, "instagram": 0.88, "twitter": 0.80, "linkedin": 0.65 },
+      "avg_score": 7.6,
+      "usage_count": 0
+    }
+  ]
+}

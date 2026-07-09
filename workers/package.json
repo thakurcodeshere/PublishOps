@@ -1,0 +1,27 @@
+{
+  "name": "publishops-workers",
+  "version": "1.0.0",
+  "description": "PublishOps BullMQ background workers — upload, comment, and edit processors",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "upload": "node src/upload_worker.js",
+    "comment": "node src/comment_worker.js",
+    "edit": "node src/edit_worker.js",
+    "lint": "eslint src/",
+    "test": "node --test src/**/*.test.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "bullmq": "^5.8.0",
+    "dotenv": "^16.4.5",
+    "ioredis": "^5.4.1",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.5.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

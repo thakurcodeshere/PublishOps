@@ -1,0 +1,27 @@
+# =============================================================================
+# PublishOps — BullMQ Worker Dockerfile
+# =============================================================================
+# Lightweight Node.js image for BullMQ workers.
+# The specific worker script is selected via the `command` in docker-compose.
+# =============================================================================
+
+FROM node:20-alpine AS base
+
+RUN apk add --no-cache curl tini
+WORKDIR /app
+
+# Install dependencies
+COPY workers/package.json workers/package-lock.json* ./
+RUN npm ci --omit=dev --ignore-scripts
+
+# Copy worker source
+COPY workers/src/ ./src/
+
+# Non-root user (node is built into the alpine image)
+USER node
+
+# Use tini as init for proper signal handling
+ENTRYPOINT ["/sbin/tini", "--"]
+
+# Default command (overridden per service in docker-compose)
+CMD ["node", "src/upload_worker.js"]
